@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 mod messages;
+mod net;
 
 pub use messages::*;
 use socket2::{Protocol, Type};
