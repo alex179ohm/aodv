@@ -5,7 +5,7 @@ use std::net::{IpAddr, Ipv4Addr};
 use crate::messages::headers::{RepHeader, Type};
 
 #[allow(dead_code)]
-pub struct RRep {
+pub struct RouteResponse {
     header: RepHeader,
     destination: IpAddr,
     sequence: u32,
@@ -13,9 +13,9 @@ pub struct RRep {
     lifetime: u32,
 }
 
-impl Default for RRep {
+impl Default for RouteResponse {
     fn default() -> Self {
-        RRep {
+        RouteResponse {
             header: RepHeader::default(),
             destination: IpAddr::V4(Ipv4Addr::new(0, 0, 0, 0)),
             sequence: 0,
