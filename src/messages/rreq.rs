@@ -6,7 +6,7 @@ use crate::messages::headers::ReqHeader;
 
 #[allow(dead_code)]
 #[derive(Clone, Copy, Debug)]
-pub struct RReq {
+pub struct RouteRequest {
     pub header: ReqHeader,
     pub id: u32,
     pub destination: IpAddr,
@@ -15,9 +15,9 @@ pub struct RReq {
     pub orig_seq: u32,
 }
 
-impl Default for RReq {
+impl Default for RouteRequest {
     fn default() -> Self {
-        RReq {
+        RouteRequest {
             header: ReqHeader::default(),
             id: 0,
             destination: IpAddr::V4(Ipv4Addr::new(0, 0, 0, 0)),
@@ -28,7 +28,7 @@ impl Default for RReq {
     }
 }
 
-impl From<&[u8]> for RReq {
+impl From<&[u8]> for RouteRequest {
     fn from(_v: &[u8]) -> Self {
         Self::default()
     }
