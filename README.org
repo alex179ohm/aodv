@@ -1,0 +1,5 @@
+#+TITLE: Ad Hoc Distance Vector based link Protocol
+#+AUTHOR: Alessandro Cresto Miseroglio
+#+DESCRIPTION: Proof of concept, Rust implemented, Aodv based mesh protocol
+#+EMAIL: alessandro.cresto.miseroglio@gmail.com
+#+DATE: [2022-03-19 sab]
