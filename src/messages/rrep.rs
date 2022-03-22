@@ -2,7 +2,7 @@
 
 use std::net::{IpAddr, Ipv4Addr};
 
-use crate::messages::headers::{RepHeader, Type};
+use crate::messages::headers::RepHeader;
 
 #[allow(dead_code)]
 pub struct RouteResponse {
@@ -22,16 +22,5 @@ impl Default for RouteResponse {
             originator: IpAddr::V4(Ipv4Addr::new(0, 0, 0, 0)),
             lifetime: 0,
         }
-    }
-}
-
-#[allow(dead_code)]
-pub struct RRepAck {
-    ty: Type,
-}
-
-impl Default for RRepAck {
-    fn default() -> Self {
-        Self { ty: Type::Ack }
     }
 }
