@@ -11,7 +11,7 @@ pub struct Unreachable {
 }
 
 #[derive(Debug, Clone, Copy)]
-pub struct RErr {
+pub struct RouteError {
     header: ErrHeader,
     unreachable: Unreachable,
     addictional_unreachable: Option<Unreachable>,
