@@ -88,15 +88,15 @@ pub enum Flag {
 }
 
 #[derive(Debug, Clone, Copy)]
-pub struct ReqHeader {
+pub struct RequestHeader {
     ty: Type,
     flag: Flag,
     hop: Count,
 }
 
-impl Default for ReqHeader {
+impl Default for RequestHeader {
     fn default() -> Self {
-        ReqHeader {
+        RequestHeader {
             ty: Type::Req,
             flag: Flag::Gratuitous,
             hop: Count(0),
@@ -105,16 +105,16 @@ impl Default for ReqHeader {
 }
 
 #[derive(Debug, Clone, Copy)]
-pub struct RepHeader {
+pub struct ResponseHeader {
     ty: Type,
     flag: Flag,
     prefix_sz: PrefixSize,
     hop: Count,
 }
 
-impl Default for RepHeader {
+impl Default for ResponseHeader {
     fn default() -> Self {
-        RepHeader {
+        ResponseHeader {
             ty: Type::Rep,
             flag: Flag::AckRequired,
             prefix_sz: PrefixSize(0),
@@ -124,13 +124,13 @@ impl Default for RepHeader {
 }
 
 #[derive(Debug, Clone, Copy)]
-pub struct ErrHeader {
+pub struct ErrorHeader {
     ty: Type,
     flag: Flag,
     dest: Count,
 }
 
-impl Default for ErrHeader {
+impl Default for ErrorHeader {
     fn default() -> Self {
         Self {
             ty: Type::Err,
