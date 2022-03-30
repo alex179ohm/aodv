@@ -2,12 +2,12 @@
 
 use std::net::{IpAddr, Ipv4Addr};
 
-use crate::messages::headers::ReqHeader;
+use crate::messages::headers::RequestHeader;
 
 #[allow(dead_code)]
 #[derive(Clone, Copy, Debug)]
 pub struct RouteRequest {
-    pub header: ReqHeader,
+    pub header: RequestHeader,
     pub id: u32,
     pub destination: IpAddr,
     pub dest_seq: u32,
@@ -18,7 +18,7 @@ pub struct RouteRequest {
 impl Default for RouteRequest {
     fn default() -> Self {
         RouteRequest {
-            header: ReqHeader::default(),
+            header: RequestHeader::default(),
             id: 0,
             destination: IpAddr::V4(Ipv4Addr::new(0, 0, 0, 0)),
             dest_seq: 0,
