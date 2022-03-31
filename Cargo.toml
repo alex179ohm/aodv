@@ -8,4 +8,4 @@ description = "Ad-Hoc On-Demand Distance Vector protocol implementation"
 
 [dependencies]
 bytes = "1.1.0"
-socket2 = "0.4.4"
+socket2 = "0.4.0"
