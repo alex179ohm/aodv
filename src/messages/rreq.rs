@@ -1,4 +1,4 @@
-// Copyright 2022 Alessandro Cresto Miseroglio.
+// Copyright 2022 Alessandro Cresto Miseroglio <alessandro.cresto.miseroglio@gmail.com>.
 //
 // Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
 // http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
